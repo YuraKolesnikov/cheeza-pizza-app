@@ -1,0 +1,56 @@
+{
+	"root": true,
+	"env": { "browser": true, "es2020": true },
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended"
+	],
+	"ignorePatterns": ["dist", ".eslintrc.cjs"],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["react-refresh", "import"],
+	"rules": {
+		"react-refresh/only-export-components": [
+			"warn",
+			{ "allowConstantExport": true }
+		],
+		"quotes": ["error", "single", { "allowTemplateLiterals": true }],
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": "",
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "always-multiline",
+				"objects": "always-multiline",
+				"imports": "always-multiline",
+				"exports": "always-multiline",
+				"functions": "never"
+			}
+		],
+		"@typescript-eslint/no-magic-numbers": [
+			"warn",
+			{
+				"ignore": [0, 1, -1, 10, 2, 1000],
+				"ignoreArrayIndexes": true,
+				"ignoreEnums": true
+			}
+		],
+		"object-curly-spacing": ["error", "always"],
+		"import/order": [
+			"error",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index",
+					"object",
+					"type"
+				]
+			}
+		],
+		"@typescript-eslint/no-namespace": "off"
+	}
+}
