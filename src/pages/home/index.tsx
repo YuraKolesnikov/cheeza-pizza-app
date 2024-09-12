@@ -1,4 +1,4 @@
-import { Button, Rating } from 'components/ui'
+import { Button, Rating, Price } from 'components/ui'
 
 import styles from './index.module.pcss'
 
@@ -56,6 +56,11 @@ export const Home = () => {
 
       <h2>Rating</h2>
       <Rating rating={5} />
+
+      <h2>Price</h2>
+      <Price price={2595} />
+      <Price price={250000} size="m" />
+      <Price price={1723} size="s" color="gray" />
     </section>
   )
 }
