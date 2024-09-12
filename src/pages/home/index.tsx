@@ -1,4 +1,4 @@
-import { Button } from 'components/ui'
+import { Button, Rating } from 'components/ui'
 
 import styles from './index.module.pcss'
 
@@ -6,6 +6,7 @@ export const Home = () => {
   return (
     <section>
       <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+        <h1>Buttons</h1>
         <Button
           theme="primary"
           size="l"
@@ -52,6 +53,9 @@ export const Home = () => {
           Click me
         </Button>
       </div>
+
+      <h2>Rating</h2>
+      <Rating rating={5} />
     </section>
   )
 }

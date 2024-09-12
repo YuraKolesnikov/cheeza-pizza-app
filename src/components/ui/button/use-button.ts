@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import classNames from 'classnames'
+import cn from 'classnames'
 
 import styles from './styles.module.pcss'
 
@@ -20,7 +20,7 @@ export const useButton = ({
 }: IButtonProps) => {
   const elementType = to ? 'link' : 'button'
 
-  const classList = classNames(
+  const classList = cn(
     styles.button,
     styles[`button--${theme}`],
     styles[`button--${size}`],
