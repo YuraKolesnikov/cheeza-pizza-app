@@ -56,11 +56,12 @@ export const Home = () => {
 
       <h2>Rating</h2>
       <Rating rating={5} />
+      <Rating rating={3.75} withNumber />
 
       <h2>Price</h2>
       <Price price={2595} />
       <Price price={250000} size="m" />
-      <Price price={1723} size="s" color="gray" />
+      <Price price={1723} size="s" color="gray" condensed />
     </section>
   )
 }

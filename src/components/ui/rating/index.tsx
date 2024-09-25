@@ -30,17 +30,18 @@ const StarIcon = ({ isHighlighted }: IStarIconProps) => (
 interface IRatingProps {
   productId: string
   rating: number
+  withNumber?: boolean
 }
 
 const STARS = [1, 2, 3, 4, 5]
 
-export const Rating = ({ productId, rating }: IRatingProps) => {
+export const Rating = ({ productId, rating, withNumber }: IRatingProps) => {
   return (
     <div className={styles['rating-wrapper']}>
       <div className={styles['stars-wrapper']}>
         {STARS.map((id) => <StarIcon isHighlighted={rating >= id} key={`${productId}_rating_${id}`} />)}
       </div>
-      <span className={styles.rating}>{rating}</span>
+      {withNumber && <span className={styles.rating}>{rating}</span>}
     </div>
   )
 }
