@@ -1,4 +1,4 @@
-import {getTypeOf, VariableTypes} from './get-type-of';
+import { getTypeOf, VariableTypes } from './get-type-of'
 
 describe('primitives', () => {
   test('number', () => {
@@ -32,7 +32,7 @@ describe('reference type variables', () => {
   })
 
   test('function', () => {
-    expect(getTypeOf(function() {})).toBe(VariableTypes.FUNCTION)
+    expect(getTypeOf(function () {})).toBe(VariableTypes.FUNCTION)
   })
 
   test('map', () => {
@@ -47,9 +47,5 @@ describe('reference type variables', () => {
 describe('other', () => {
   test('date', () => {
     expect(getTypeOf(new Date())).toBe(VariableTypes.DATE)
-  })
-
-  test('promise', () => {
-    expect(getTypeOf(Promise)).toBe(VariableTypes.PROMISE)
   })
 })

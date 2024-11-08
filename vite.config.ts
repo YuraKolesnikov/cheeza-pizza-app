@@ -21,6 +21,6 @@ export default defineConfig({
       'store':      path.resolve(__dirname, getPath('store')),
       'lib':        path.resolve(__dirname, getPath('lib')),
       'types':      path.resolve(__dirname, getPath('types')),
-    }
+    },
   },
 })

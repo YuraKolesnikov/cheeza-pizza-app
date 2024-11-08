@@ -8,10 +8,7 @@ interface IStarIconProps {
 
 const StarIcon = ({ isHighlighted }: IStarIconProps) => (
   <svg
-    className={cn(
-      styles.star,
-      { [styles['star--filled']]: isHighlighted }
-    )}
+    className={cn(styles.star, { [styles['star--filled']]: isHighlighted })}
     width="15"
     height="13"
     viewBox="0 0 15 13"
@@ -24,7 +21,6 @@ const StarIcon = ({ isHighlighted }: IStarIconProps) => (
       d="M7.33867 0.25L9.4761 4.36492L14.258 5.02492L10.7982 8.22731L11.6148 12.75L7.33867 10.6151L3.0622 12.75L3.87883 8.22731L0.419312 5.02492L5.20124 4.36492L7.33867 0.25Z"
     />
   </svg>
-
 )
 
 interface IRatingProps {
@@ -33,13 +29,19 @@ interface IRatingProps {
   withNumber?: boolean
 }
 
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 const STARS = [1, 2, 3, 4, 5]
 
 export const Rating = ({ productId, rating, withNumber }: IRatingProps) => {
   return (
     <div className={styles['rating-wrapper']}>
       <div className={styles['stars-wrapper']}>
-        {STARS.map((id) => <StarIcon isHighlighted={rating >= id} key={`${productId}_rating_${id}`} />)}
+        {STARS.map(id => (
+          <StarIcon
+            isHighlighted={rating >= id}
+            key={`${productId}_rating_${id}`}
+          />
+        ))}
       </div>
       {withNumber && <span className={styles.rating}>{rating}</span>}
     </div>

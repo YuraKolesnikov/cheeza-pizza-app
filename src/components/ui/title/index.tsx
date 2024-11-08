@@ -1,13 +1,14 @@
 import { createElement } from 'react'
-import cn from 'classnames'
 
-import styles from './styles.module.pcss'
+import { useTitle } from './use-title'
 
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 type TitleLevel = 1 | 2 | 3 | 4 | 5 | 6
 
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 type TitleSize = 1 | 2 | 3 | 4 | 5 | 6
 
-interface ITitleProps {
+export interface ITitleProps {
   level: TitleLevel
   size: TitleSize
   uppercase?: boolean
@@ -16,30 +17,7 @@ interface ITitleProps {
   children: ReactNode
 }
 
-export const Title = ({
-  level = 1,
-  size = 1,
-  uppercase = false,
-  asLabel = false,
-  labelFor,
-  children,
-}: ITitleProps) => {
-  const classNames = cn(
-    styles.title,
-    styles[`title--${size}`],
-    {
-      [styles['title--uppercase']]: uppercase,
-    }
-  )
-
-  return createElement(
-    asLabel ? 'label' : `h${level}`,
-    {
-      className: classNames,
-      ...(asLabel && {
-        for: labelFor,
-      }),
-    },
-    children
-  )
+export const Title = (props: ITitleProps) => {
+  const { tag, titleProps } = useTitle(props)
+  return createElement(tag, titleProps, props.children)
 }
