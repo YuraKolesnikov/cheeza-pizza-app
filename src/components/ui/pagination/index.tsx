@@ -1,5 +1,7 @@
 import cn from 'classnames'
 
+import { Flex } from 'components'
+
 import styles from './styles.module.pcss'
 
 export interface IPaginationProps {
@@ -23,18 +25,17 @@ const PaginationItem = ({
   isActive: boolean
   onClick: (val: string) => void
 }) => (
-  <li>
-    <button
-      className={cn(
-        styles['pagination-item'],
-        /* TODO: Продумать, как решить проблему ховера/клика на мобилках */
-        isActive && styles['pagination-item--active']
-      )}
-      onClick={() => onClick(value)}
-    >
-      {label}
-    </button>
-  </li>
+  <Flex
+    tag="button"
+    className={cn(
+      styles['pagination-item'],
+      /* TODO: Продумать, как решить проблему ховера/клика на мобилках */
+      isActive && styles['pagination-item--active']
+    )}
+    onClick={() => onClick(value)}
+  >
+    {label}
+  </Flex>
 )
 
 export const Pagination = ({
@@ -49,7 +50,7 @@ export const Pagination = ({
 
   return (
     /* TODO: Переделать на радио кнопки? */
-    <ul className={styles['pagination']}>
+    <Flex className={styles['pagination']} gap={5}>
       {options.map(o => (
         <PaginationItem
           key={`${id}_${o.value}`}
@@ -58,6 +59,6 @@ export const Pagination = ({
           onClick={onChange}
         />
       ))}
-    </ul>
+    </Flex>
   )
 }
