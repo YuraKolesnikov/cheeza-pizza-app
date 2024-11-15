@@ -1,11 +1,5 @@
-import { Button } from './button'
-import { Price } from './price'
-import { Rating } from './rating'
-import { Title } from './title'
-
-export {
-  Button,
-  Price,
-  Rating,
-  Title,
-}
+export * from './button'
+export * from './pagination'
+export * from './price'
+export * from './rating'
+export * from './title'

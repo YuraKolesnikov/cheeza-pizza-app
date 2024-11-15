@@ -1,8 +1,17 @@
-import { Button, Rating, Price, Title } from 'components/ui'
+import { useState } from 'react'
+
+import { Button, Rating, Price, Title, Pagination } from 'components/ui'
 
 import styles from './index.module.pcss'
 
 export const Home = () => {
+  const [activePage, setActivePage] = useState<number>(1)
+  const options = [
+    { value: 1, label: 1 },
+    { value: 2, label: 2 },
+    { value: 3, label: 3 },
+    { value: 4, label: 4 },
+  ]
   return (
     <section>
       <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
@@ -27,12 +36,7 @@ export const Home = () => {
         >
           Special
         </Button>
-        <Button
-          theme="primary"
-          size="s"
-          radius="rounded"
-          uppercase
-        >
+        <Button theme="primary" size="s" radius="rounded" uppercase>
           Create your own
         </Button>
         <Button
@@ -44,12 +48,7 @@ export const Home = () => {
         >
           Add to bag
         </Button>
-        <Button
-          theme="secondary"
-          size="s"
-          radius="rounded"
-          uppercase
-        >
+        <Button theme="secondary" size="s" radius="rounded" uppercase>
           Click me
         </Button>
       </div>
@@ -65,7 +64,15 @@ export const Home = () => {
 
       <h2>Typography</h2>
       <Title>Hello World!</Title>
-      <Title size={3} labelFor="quantity" asLabel uppercase>Quantity</Title>
+      <Title size={3} labelFor="quantity" asLabel uppercase>
+        Quantity
+      </Title>
+      <Pagination
+        id="main_page_pagination"
+        value={activePage}
+        onChange={setActivePage}
+        options={options}
+      />
     </section>
   )
 }
