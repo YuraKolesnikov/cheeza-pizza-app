@@ -20,7 +20,7 @@ export function useTitle({
   const titleProps = {
     className: classNames,
     ...(asLabel && {
-      for: labelFor,
+      htmlFor: labelFor,
     }),
   }
 
