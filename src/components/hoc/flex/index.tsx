@@ -7,9 +7,10 @@ export interface IFlexProps {
   align: 'center' | 'start' | 'end' | 'stretch'
   justify: 'center' | 'start' | 'between' | 'around' | 'evenly'
   gap: number
-  tag: 'div' | 'button'
+  tag: 'div' | 'button' | 'label'
   className?: string
   onClick?: MouseEventHandler<HTMLDivElement | HTMLButtonElement>
+  htmlFor?: string
   children: ReactNode
 }
 
@@ -20,6 +21,7 @@ export const Flex = ({
   tag = 'div',
   className,
   onClick,
+  htmlFor,
   children,
 }: IFlexProps) => {
   const classList = cn(
@@ -34,12 +36,20 @@ export const Flex = ({
     style: {
       gap,
     },
-    onClick,
+    ...(tag === 'label' && {
+      htmlFor,
+    }),
   }
 
   return tag === 'div' ? (
-    <div {...flexProps}>{children}</div>
+    <div onClick={onClick} {...flexProps}>
+      {children}
+    </div>
+  ) : tag === 'label' ? (
+    <label {...flexProps}>{children}</label>
   ) : (
-    <button {...flexProps}>{children}</button>
+    <button onClick={onClick} {...flexProps}>
+      {children}
+    </button>
   )
 }

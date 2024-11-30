@@ -9,6 +9,13 @@
     cursor: pointer;
     transition: background-color .2s ease-in-out;
 
+    input {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: -9999px;
+    }
+
     @media (pointer: fine) {
         &:hover:not(.pagination-item--active) {
             background-color: var(--color-light-gray);

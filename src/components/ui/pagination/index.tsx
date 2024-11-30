@@ -26,15 +26,22 @@ const PaginationItem = ({
   onClick: (val: string) => void
 }) => (
   <Flex
-    tag="button"
+    tag="label"
+    htmlFor={value}
     className={cn(
       styles['pagination-item'],
       /* TODO: Продумать, как решить проблему ховера/клика на мобилках */
       isActive && styles['pagination-item--active']
     )}
-    onClick={() => onClick(value)}
   >
     {label}
+    <input
+      type="radio"
+      id={value}
+      value={value}
+      onChange={() => onClick(value)}
+      checked={isActive}
+    />
   </Flex>
 )
 
@@ -49,7 +56,6 @@ export const Pagination = ({
   }
 
   return (
-    /* TODO: Переделать на радио кнопки? */
     <Flex className={styles['pagination']} gap={5}>
       {options.map(o => (
         <PaginationItem
