@@ -9,6 +9,7 @@ import {
   Icon,
   EIcons,
   Loader,
+  Tabs,
 } from 'components/ui'
 
 import styles from './index.module.pcss'
@@ -21,6 +22,7 @@ export const Home = () => {
     { value: 3, label: 3 },
     { value: 4, label: 4 },
   ]
+  const [activeTab, setActiveTab] = useState<string>('book')
   return (
     <section>
       <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
@@ -83,6 +85,15 @@ export const Home = () => {
         options={options}
       />
       <Loader />
+      <Tabs
+        value={activeTab}
+        onChange={setActiveTab}
+        options={[
+          { id: 'book', label: 'Book' },
+          { id: 'description', label: 'Description' },
+          { id: 'comment', label: 'Comment' },
+        ]}
+      />
       <Icon name={EIcons.ALARM_CLOCK} className={styles.icon} />
       <Icon name={EIcons.ARROW_DOWN} className={styles.icon} />
       <Icon name={EIcons.ARROW_RIGHT} className={styles.icon} />
