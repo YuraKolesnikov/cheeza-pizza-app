@@ -1,0 +1,27 @@
+.loader {
+  width: 130px;
+  margin: 0 auto;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-dark-gray);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.dot--1 { animation-delay: .2s; }
+.dot--2 { animation-delay: .4s; }
+.dot--3 { animation-delay: .6s; }
+.dot--4 { animation-delay: .8s; }
+.dot--5 { animation-delay: 1s; }
+
+@keyframes pulse {
+  0% { opacity: 0; }
+  50% { opacity: .75; }
+  60% { opacity: .75; }
+  100% { opacity: 0; }
+}

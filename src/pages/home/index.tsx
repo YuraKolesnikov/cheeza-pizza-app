@@ -8,6 +8,7 @@ import {
   Pagination,
   Icon,
   EIcons,
+  Loader,
 } from 'components/ui'
 
 import styles from './index.module.pcss'
@@ -81,6 +82,7 @@ export const Home = () => {
         onChange={setActivePage}
         options={options}
       />
+      <Loader />
       <Icon name={EIcons.ALARM_CLOCK} className={styles.icon} />
       <Icon name={EIcons.ARROW_DOWN} className={styles.icon} />
       <Icon name={EIcons.ARROW_RIGHT} className={styles.icon} />
