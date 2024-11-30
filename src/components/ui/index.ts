@@ -1,4 +1,5 @@
 export * from './button'
+export * from './icon'
 export * from './pagination'
 export * from './price'
 export * from './rating'

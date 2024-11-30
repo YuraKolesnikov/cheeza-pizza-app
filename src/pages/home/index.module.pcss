@@ -30,3 +30,30 @@
     background-color: var(--color-lighter-gray);
   }
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent-1);
+}
+
+.icon-outline {
+  width: 24px;
+  height: 24px;
+  color: teal;
+}
+
+/* Pizza icon colored variant requires unique styling */
+.pizza-icon {
+  width: 24px;
+  height: 24px;
+  path:first-child,
+  path:nth-child(2),
+  path:nth-child(3) {
+    fill: var(--color-dark-blue) !important;
+  }
+
+  path:last-child {
+    fill: var(--color-accent-1) !important;
+  }
+}
