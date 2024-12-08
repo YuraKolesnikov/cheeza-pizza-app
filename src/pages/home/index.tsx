@@ -33,6 +33,7 @@ export const Home = () => {
           radius="rounded"
           font="regular"
           uppercase
+          prependIcon={EIcons.ARROW_RIGHT}
         >
           Order now
         </Button>
@@ -47,7 +48,13 @@ export const Home = () => {
         >
           Special
         </Button>
-        <Button theme="primary" size="s" radius="rounded" uppercase>
+        <Button
+          theme="primary"
+          size="s"
+          radius="rounded"
+          prependIcon={EIcons.ARROW_RIGHT}
+          uppercase
+        >
           Create your own
         </Button>
         <Button

@@ -59,11 +59,15 @@
 .button--s {
   --font-size: var(--font-size-2);
   --padding: 10px 30px;
+  --icon-size: 10px;
+  --icon-margin-left: 10px;
 }
 
 .button--l {
   --font-size: var(--font-size-4);
   --padding: 14px 36px;
+  --icon-size: 14px;
+  --icon-margin-left: 16px;
 }
 
 .button--disabled {
@@ -77,4 +81,10 @@
 
 .button--font-light {
   --font-weight: var(--font-weight--light);
+}
+
+.button__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-left: var(--icon-margin-left);
 }

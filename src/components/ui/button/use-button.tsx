@@ -6,7 +6,6 @@ import styles from './styles.module.pcss'
 import { IButtonProps } from '.'
 
 export const useButton = ({
-  children,
   className,
   onClick,
   type,
@@ -36,25 +35,18 @@ export const useButton = ({
   const elementProps = useMemo(() => {
     return {
       className: classList,
-      children,
-      ...(elementType === 'button' ? {
-        disabled,
-        type,
-        onClick,
-      } : {
-        role: 'button',
-        to,
-      }),
+      ...(elementType === 'button'
+        ? {
+            disabled,
+            type,
+            onClick,
+          }
+        : {
+            role: 'button',
+            to,
+          }),
     }
-  }, [
-    children,
-    classList,
-    disabled,
-    elementType,
-    onClick,
-    to,
-    type,
-  ])
+  }, [classList, disabled, elementType, onClick, to, type])
 
   return {
     elementProps,
