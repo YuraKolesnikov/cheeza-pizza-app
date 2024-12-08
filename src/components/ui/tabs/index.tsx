@@ -43,6 +43,7 @@ export const Tabs = ({ value, options, onChange }: ITabsProps) => {
     <Flex className={styles.tabs} align="center" justify="between">
       {options.map(o => (
         <TabOption
+          key={`tabs_${o.id}`}
           id={o.id}
           label={o.label}
           onChange={onChange}
