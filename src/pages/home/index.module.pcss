@@ -45,15 +45,17 @@
 
 /* Pizza icon colored variant requires unique styling */
 .pizza-icon {
+  --color-1: var(--color-darker-gray);
+  --color-2: var(--color-accent-1);
   width: 24px;
   height: 24px;
   path:first-child,
   path:nth-child(2),
   path:nth-child(3) {
-    fill: var(--color-dark-blue) !important;
+    fill: var(--color-1) !important;
   }
 
   path:last-child {
-    fill: var(--color-accent-1) !important;
+    fill: var(--color-2) !important;
   }
 }
