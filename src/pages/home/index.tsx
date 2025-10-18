@@ -42,6 +42,16 @@ export const Home = () => {
 					font='regular'
 					uppercase
 					prependIcon={EIcons.ARROW_RIGHT}
+					counterValue={1}
+					prependCounter
+				/>
+				<Button
+					theme='primary'
+					size='l'
+					radius='rounded'
+					font='regular'
+					uppercase
+					prependIcon={EIcons.ARROW_RIGHT}
 				>
 					Order now
 				</Button>

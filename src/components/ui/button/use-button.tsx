@@ -17,6 +17,8 @@ export const useButton = ({
 	disabled,
 	to,
 	prependIcon,
+	prependCounter,
+	counterValue,
 	children,
 }: IButtonProps) => {
 	const elementType = to ? 'link' : 'button'
@@ -52,6 +54,8 @@ export const useButton = ({
 		elementProps,
 		elementType,
 		prependIcon,
+		prependCounter,
+		counterValue,
 		children,
 	}
 }
