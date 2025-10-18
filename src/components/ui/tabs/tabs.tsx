@@ -1,25 +1,12 @@
 import cn from 'classnames'
+
 import { Flex } from 'components'
+
+import { ITabOptionProps, ITabsProps } from './types'
 
 import styles from './tabs.module.pcss'
 
-export interface ITabOption {
-  id: string
-  label: string
-}
-
-interface ITabOptionProp extends ITabOption {
-  onChange: (o: string) => void
-  isActive: boolean
-}
-
-interface ITabsProps {
-  value: string
-  options: ITabOption[]
-  onChange: (o: string) => void
-}
-
-const TabOption = ({ id, label, onChange, isActive }: ITabOptionProp) => (
+const TabOption = ({ id, label, onChange, isActive }: ITabOptionProps) => (
   <label
     className={cn(styles.tab, isActive && styles['tab--active'])}
     htmlFor={id}
@@ -39,6 +26,7 @@ export const Tabs = ({ value, options, onChange }: ITabsProps) => {
   if (!options?.length) {
     return null
   }
+
   return (
     <Flex className={styles.tabs} align="center" justify="between">
       {options.map(o => (

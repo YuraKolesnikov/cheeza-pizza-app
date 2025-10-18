@@ -1,3 +1,3 @@
-export * from './types'
-export * from './icon'
-export * from './icons'
+export { Icon } from './icon'
+export { ICONS, type IconType } from './icons'
+export { EIcons } from './types'

@@ -2,12 +2,9 @@ import cn from 'classnames'
 
 import { Icon } from 'components'
 
+import { IRatingProps } from './types'
+
 import styles from './styles.module.pcss'
-interface IRatingProps {
-  productId: string
-  rating: number
-  withNumber?: boolean
-}
 
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 const STARS = [1, 2, 3, 4, 5]

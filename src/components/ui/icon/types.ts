@@ -33,3 +33,8 @@ export enum EIcons {
   SHRIMP = 'shrimp',
   STAR = 'star',
 }
+
+export interface IIconProps {
+  name: EIcons
+  iconClassName?: string
+}

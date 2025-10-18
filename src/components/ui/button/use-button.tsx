@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import styles from './styles.module.pcss'
 
-import { IButtonProps } from '.'
+import { IButtonProps } from './button'
 
 export const useButton = ({
   className,

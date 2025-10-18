@@ -17,8 +17,14 @@ export enum VariableTypes {
   REGEXP = 'regexp',
   PROMISE = 'promise',
   PROXY = 'proxy',
-  ERROR = 'error'
+  ERROR = 'error',
 }
 
-/* @ts-expect-error: Object is possibly 'null'. */
-export const getTypeOf = (variable: unknown): VariableTypes => ({}).toString.call(variable).match(/\s([a-zA-Z]+)/)[1].toLowerCase() as VariableTypes
+export const getTypeOf = (variable: unknown): VariableTypes => {
+  if (variable === null) return VariableTypes.NULL
+
+  const match = {}.toString.call(variable).match(/\s([a-zA-Z]+)/)
+  if (!match) return VariableTypes.UNDEFINED
+
+  return match[1].toLowerCase() as VariableTypes
+}

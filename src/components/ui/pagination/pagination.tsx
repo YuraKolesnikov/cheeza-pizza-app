@@ -2,29 +2,16 @@ import cn from 'classnames'
 
 import { Flex } from 'components'
 
-import styles from './styles.module.pcss'
+import { IPaginationItemProps, IPaginationProps } from './types'
 
-export interface IPaginationProps {
-  id: string
-  value: string
-  options: {
-    value: string
-    label: string
-  }[] /* TODO: Вынести в общий тип Option */
-  onChange: (val: string) => void
-}
+import styles from './styles.module.pcss'
 
 const PaginationItem = ({
   value,
   label,
   isActive,
   onClick,
-}: {
-  value: string
-  label: string
-  isActive: boolean
-  onClick: (val: string) => void
-}) => (
+}: IPaginationItemProps) => (
   <Flex
     tag="label"
     htmlFor={value}

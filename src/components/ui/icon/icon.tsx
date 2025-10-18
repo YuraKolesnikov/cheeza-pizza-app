@@ -1,10 +1,6 @@
-import { EIcons } from './types'
 import { ICONS } from './icons'
 
-interface IIconProps {
-  name: EIcons
-  iconClassName?: string
-}
+import { IIconProps } from './types'
 
 export const Icon = ({ name, iconClassName }: IIconProps) => {
   const IconComponent = ICONS[name]

@@ -1,18 +1,8 @@
-import { MouseEventHandler } from 'react'
 import cn from 'classnames'
 
-import styles from './index.module.pcss'
+import { IFlexProps } from './types'
 
-export interface IFlexProps {
-  align: 'center' | 'start' | 'end' | 'stretch'
-  justify: 'center' | 'start' | 'between' | 'around' | 'evenly'
-  gap: number
-  tag: 'div' | 'button' | 'label'
-  className?: string
-  onClick?: MouseEventHandler<HTMLDivElement | HTMLButtonElement>
-  htmlFor?: string
-  children: ReactNode
-}
+import styles from './index.module.pcss'
 
 export const Flex = ({
   align = 'center',

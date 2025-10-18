@@ -1,1 +1,1 @@
-export * from './use-device'
+export { useDevice } from './use-device'
