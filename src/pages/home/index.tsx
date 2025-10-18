@@ -101,42 +101,48 @@ export const Home = () => {
           { id: 'comment', label: 'Comment' },
         ]}
       />
-      <Icon name={EIcons.ALARM_CLOCK} className={styles.icon} />
-      <Icon name={EIcons.ARROW_DOWN} className={styles.icon} />
-      <Icon name={EIcons.ARROW_RIGHT} className={styles.icon} />
-      <Icon name={EIcons.BACON} className={styles.icon} />
-      <Icon name={EIcons.CART} className={styles.icon} />
+      <Icon name={EIcons.ALARM_CLOCK} iconClassName={styles.icon} />
+      <Icon name={EIcons.ARROW_DOWN} iconClassName={styles.icon} />
+      <Icon name={EIcons.ARROW_RIGHT} iconClassName={styles.icon} />
+      <Icon name={EIcons.BACON} iconClassName={styles.icon} />
+      <Icon name={EIcons.CART} iconClassName={styles.icon} />
       <Icon
         name={EIcons.CHECKMARK_OUTLINE}
-        className={styles['icon-outline']}
+        iconClassName={styles['icon-outline']}
       />
-      <Icon name={EIcons.CHECKMARK} className={styles.icon} />
-      <Icon name={EIcons.CHEESE} className={styles.icon} />
-      <Icon name={EIcons.CHICKEN} className={styles.icon} />
-      <Icon name={EIcons.CIRCLE_OUTLINE} className={styles['icon-outline']} />
-      <Icon name={EIcons.CIRCLE} className={styles.icon} />
-      <Icon name={EIcons.CLOSE_OUTLINE} className={styles['icon-outline']} />
-      <Icon name={EIcons.CLOSE} className={styles.icon} />
-      <Icon name={EIcons.CUTLERY} className={styles.icon} />
-      <Icon name={EIcons.HOME} className={styles.icon} />
-      <Icon name={EIcons.MENU_DESSERTS} className={styles.icon} />
-      <Icon name={EIcons.MENU_DRINKS} className={styles.icon} />
-      <Icon name={EIcons.MENU_PASTA} className={styles.icon} />
-      <Icon name={EIcons.MENU_PIZZA} className={styles.icon} />
-      <Icon name={EIcons.MENU_SALADS} className={styles.icon} />
-      <Icon name={EIcons.MENU} className={styles.icon} />
-      <Icon name={EIcons.MUSHROOM} className={styles.icon} />
-      <Icon name={EIcons.NOTEBOOK} className={styles.icon} />
-      <Icon name={EIcons.OLIVES} className={styles.icon} />
-      <Icon name={EIcons.ONION} className={styles.icon} />
-      <Icon name={EIcons.PENCIL} className={styles.icon} />
-      <Icon name={EIcons.PEPPER} className={styles.icon} />
-      <Icon name={EIcons.PHONE} className={styles.icon} />
-      <Icon name={EIcons.PIZZA} className={styles['pizza-icon']} />
-      <Icon name={EIcons.PLUS} className={styles.icon} />
-      <Icon name={EIcons.SAUSAGE} className={styles.icon} />
-      <Icon name={EIcons.SHRIMP} className={styles.icon} />
-      <Icon name={EIcons.STAR} className={styles.icon} />
+      <Icon name={EIcons.CHECKMARK} iconClassName={styles.icon} />
+      <Icon name={EIcons.CHEESE} iconClassName={styles.icon} />
+      <Icon name={EIcons.CHICKEN} iconClassName={styles.icon} />
+      <Icon
+        name={EIcons.CIRCLE_OUTLINE}
+        iconClassName={styles['icon-outline']}
+      />
+      <Icon name={EIcons.CIRCLE} iconClassName={styles.icon} />
+      <Icon
+        name={EIcons.CLOSE_OUTLINE}
+        iconClassName={styles['icon-outline']}
+      />
+      <Icon name={EIcons.CLOSE} iconClassName={styles.icon} />
+      <Icon name={EIcons.CUTLERY} iconClassName={styles.icon} />
+      <Icon name={EIcons.HOME} iconClassName={styles.icon} />
+      <Icon name={EIcons.MENU_DESSERTS} iconClassName={styles.icon} />
+      <Icon name={EIcons.MENU_DRINKS} iconClassName={styles.icon} />
+      <Icon name={EIcons.MENU_PASTA} iconClassName={styles.icon} />
+      <Icon name={EIcons.MENU_PIZZA} iconClassName={styles.icon} />
+      <Icon name={EIcons.MENU_SALADS} iconClassName={styles.icon} />
+      <Icon name={EIcons.MENU} iconClassName={styles.icon} />
+      <Icon name={EIcons.MUSHROOM} iconClassName={styles.icon} />
+      <Icon name={EIcons.NOTEBOOK} iconClassName={styles.icon} />
+      <Icon name={EIcons.OLIVES} iconClassName={styles.icon} />
+      <Icon name={EIcons.ONION} iconClassName={styles.icon} />
+      <Icon name={EIcons.PENCIL} iconClassName={styles.icon} />
+      <Icon name={EIcons.PEPPER} iconClassName={styles.icon} />
+      <Icon name={EIcons.PHONE} iconClassName={styles.icon} />
+      <Icon name={EIcons.PIZZA} iconClassName={styles['pizza-icon']} />
+      <Icon name={EIcons.PLUS} iconClassName={styles.icon} />
+      <Icon name={EIcons.SAUSAGE} iconClassName={styles.icon} />
+      <Icon name={EIcons.SHRIMP} iconClassName={styles.icon} />
+      <Icon name={EIcons.STAR} iconClassName={styles.icon} />
     </section>
   )
 }

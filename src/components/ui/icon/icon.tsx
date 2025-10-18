@@ -3,13 +3,13 @@ import { ICONS } from './icons'
 
 interface IIconProps {
   name: EIcons
-  className?: string
+  iconClassName?: string
 }
 
-export const Icon = ({ name, className }: IIconProps) => {
+export const Icon = ({ name, iconClassName }: IIconProps) => {
   const IconComponent = ICONS[name]
 
   if (IconComponent) {
-    return <IconComponent className={className} />
+    return <IconComponent className={iconClassName} />
   }
 }
