@@ -9,21 +9,23 @@ import { IButtonProps } from './types'
 import styles from './styles.module.pcss'
 
 export const Button: FC = (props: IButtonProps) => {
-  const { elementProps, elementType } = useButton(props)
-  const { children, prependIcon } = props
+	const { elementProps, elementType, prependIcon, children } = useButton(props)
 
-  const content = (
-    <>
-      {children}
-      {prependIcon && (
-        <Icon className={styles.button__icon} name={prependIcon} />
-      )}
-    </>
-  )
+	const content = (
+		<>
+			{children}
+			{prependIcon && (
+				<>
+					{children && <div className={styles['button__icon-separator']} />}
+					<Icon iconClassName={styles.button__icon} name={prependIcon} />
+				</>
+			)}
+		</>
+	)
 
-  return elementType === 'button' ? (
-    <button {...elementProps}>{content}</button>
-  ) : (
-    <Link {...elementProps}>{content}</Link>
-  )
+	return elementType === 'button' ? (
+		<button {...elementProps}>{content}</button>
+	) : (
+		<Link {...elementProps}>{content}</Link>
+	)
 }

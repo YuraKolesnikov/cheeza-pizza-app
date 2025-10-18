@@ -15,7 +15,6 @@
   font-weight: var(--font-weight);
   filter: var(--box-shadow);
   cursor: pointer;
-  display: block;
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -35,6 +34,14 @@
 
 .button--chip {
   --border-radius: var(--border-radius-chip);
+}
+
+.button--no-text {
+  padding: 0;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .button--primary {
@@ -86,5 +93,10 @@
 .button__icon {
   width: var(--icon-size);
   height: var(--icon-size);
-  margin-left: var(--icon-margin-left);
+}
+
+.button__icon-separator {
+  display: inline-block;
+  height: 100%;
+  width: var(--icon-margin-left);
 }
