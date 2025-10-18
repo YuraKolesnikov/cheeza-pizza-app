@@ -66,4 +66,6 @@ export const ICONS = {
   sausage: Sausage,
   shrimp: Shrimp,
   star: Star,
-}
+} as const
+
+export type IconType = keyof typeof ICONS
