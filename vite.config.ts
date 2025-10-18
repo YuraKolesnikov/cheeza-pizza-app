@@ -6,7 +6,12 @@ import svgr from 'vite-plugin-svgr'
 import { svgrComponent } from 'vite-plugin-svgr-component'
 
 const getPath = (folder: string): string =>
-  path.resolve(__dirname, `src/${folder}`)
+  path.resolve(__dirname, `./src/${folder}`)
+
+console.log({
+  path: getPath('components'),
+  fullPath: path.resolve(__dirname, getPath('components')),
+})
 
 // https://vitejs.dev/config/
 export default defineConfig({

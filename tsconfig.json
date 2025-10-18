@@ -5,7 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
@@ -20,7 +20,13 @@
     "emitDecoratorMetadata": false,
     "baseUrl": ".",
     "paths": {
-      "@": ["src/*"]
+      "@": ["./src/*"],
+      "pages": ["./src/pages"],
+      "hooks": ["./src/hooks"],
+      "components": ["./src/components"],
+      "store": ["./src/store"],
+      "lib": ["./src/lib"],
+      "types": ["./src/types"],
     },
   },
   "include": ["src"],
